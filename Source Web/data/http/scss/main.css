@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Extra+Condensed");
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+@font-face {
+  font-family: "Chicago";
+  src: url("/font/ChicagoFLF.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: #12222b;
+  background-color: #edf4f8;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #381705;
+  font-weight: normal;
+}
+
+a {
+  color: #f1925f;
+  text-decoration: none;
+}
+a:hover {
+  color: #f9d2bd;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.1875rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.9375rem;
+  }
+
+  h4 {
+    font-size: 1.5625rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+}
+hr {
+  clear: both;
+  height: 0;
+  margin: 1.25rem auto;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #f1925f;
+  border-left: 0;
+}
+
+pre, code, tt {
+  font-family: "Fira Code", monospace;
+}
+
+/*
+.fad {
+    color: #0f4769;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    &.scroll {
+        min-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+thead, tfoot {
+    background-color: darken(white, 10%);
+    tr {
+        background-color: transparent;
+        &:hover {
+            background-color: darken(white, 12.5%);
+        }
+    }
+}
+
+tr {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: darken(white, 5%);
+}
+
+@media (min-width:768px) { 
+    td {
+        padding: 0.35rem 0;
+    }
+}
+*/
+@media (max-width: 767px) {
+  .show-for-tablet-only, .show-for-tablet-up, .show-for-desktop-only, .show-for-desktop-up, .show-for-wide-only, .show-for-wide-up {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .show-for-mobile-only, .show-for-desktop-only, .show-for-desktop-up, .show-for-wide-only, .show-for-wide-up {
+    display: none;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .show-for-mobile-only, .show-for-tablet-only, .show-for-wide-only, .show-for-wide-up {
+    display: none;
+  }
+}
+@media (min-width: 1600px) {
+  .show-for-mobile-only, .show-for-tablet-only, .show-for-desktop-only {
+    display: none;
+  }
+}
+#sidebar {
+  grid-area: sidebar;
+}
+
+#actions {
+  grid-area: actions;
+}
+
+#title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+#content {
+  grid-area: body;
+  margin-top: 50px;
+  padding: 1rem;
+}
+#content h2 {
+  margin: 0 0 -1rem 0;
+  font-size: 1.5rem;
+}
+
+#footer {
+  grid-area: footer;
+  z-index: 9;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "sidebar" "body" "footer";
+  grid-template-columns: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile_only {
+  display: inherit;
+}
+
+@media (min-width: 768px) {
+  .mobile_only {
+    display: none;
+  }
+
+  body {
+    grid-template-areas: "sidebar header" "sidebar body" "footer footer";
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #content h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .mobile_only {
+    display: none;
+  }
+
+  body {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1900px;
+    grid-template-areas: "sidebar header header" "sidebar body body" "footer footer footer";
+    grid-template-rows: 3.8rem auto auto;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+@media (min-width: 1600px) {
+  body {
+    padding: 0 2rem;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+#title {
+  background-color: #4c3f1f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#title h1 {
+  color: #edf4f8;
+  margin: 0.5rem;
+}
+#title .fad {
+  color: #edf4f8;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c3f1f;
+  color: #edf4f8;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+#footer p {
+  margin: 0.25rem 1rem;
+  line-height: 1;
+}
+#footer a, #footer a .fad {
+  color: #edf4f8;
+}
+#footer a:hover, #footer a .fad:hover {
+  color: #a4c6da;
+}
+
+#content {
+  z-index: 0;
+}
+
+[data-toggle=actions] {
+  display: none;
+}
+
+#sidebar_navigation, #sidebar_statistics, #sidebar_actions {
+  position: fixed;
+  top: 3.1rem;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  overflow: scroll;
+  display: none;
+  background-color: #74983e;
+  color: #edf4f8;
+  z-index: 1;
+}
+#sidebar_navigation.active, #sidebar_statistics.active, #sidebar_actions.active {
+  display: block;
+}
+#sidebar_navigation h5, #sidebar_statistics h5, #sidebar_actions h5 {
+  color: #edf4f8;
+  background-color: #4c3f1f;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+#sidebar_navigation h5 a, #sidebar_statistics h5 a, #sidebar_actions h5 a {
+  color: #edf4f8;
+  float: right;
+}
+#sidebar_navigation h5 a .fad, #sidebar_statistics h5 a .fad, #sidebar_actions h5 a .fad {
+  color: #edf4f8;
+}
+#sidebar_navigation > ul, #sidebar_statistics > ul, #sidebar_actions > ul {
+  font-weight: bold;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 1.6rem;
+}
+#sidebar_navigation > ul li.active, #sidebar_statistics > ul li.active, #sidebar_actions > ul li.active {
+  font-style: italic;
+}
+#sidebar_navigation > ul a, #sidebar_statistics > ul a, #sidebar_actions > ul a {
+  cursor: pointer;
+  color: #edf4f8;
+  font-weight: normal;
+}
+#sidebar_navigation > ul a:hover, #sidebar_statistics > ul a:hover, #sidebar_actions > ul a:hover {
+  color: #c9dde9;
+}
+#sidebar_navigation > ul > ul, #sidebar_statistics > ul > ul, #sidebar_actions > ul > ul {
+  padding-left: 1.6rem;
+  list-style-type: disc;
+}
+
+#sidebar_statistics > ul {
+  font-weight: normal;
+}
+#sidebar_statistics > ul li {
+  color: rgba(237, 244, 248, 0.2) strong;
+  color-color: #edf4f8;
+  color-margin-right: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  #title, #footer, #sidebar_navigation, #sidebar_statistics {
+    position: relative;
+    width: unset;
+    height: unset;
+    top: unset;
+    left: unset;
+    overflow: unset;
+  }
+
+  #sidebar_navigation {
+    display: block;
+    top: unset;
+  }
+
+  #sidebar_statistics {
+    display: block;
+    flex: auto;
+    top: unset;
+  }
+
+  #sidebar_actions {
+    top: 3.8rem;
+  }
+
+  #sidebar {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .mobile_sidebar.left, [data-toggle=sidebar_statistics] {
+    display: none;
+  }
+
+  #title {
+    display: flex;
+    background-color: #4c3f1f;
+    align-items: center;
+  }
+  #title h1 {
+    line-height: 1;
+    font-size: 2.9rem;
+  }
+
+  #footer {
+    display: flex;
+    border-top: 0.6rem solid #282110;
+    padding: 0.35rem;
+  }
+  #footer p {
+    line-height: 1.5;
+  }
+
+  #content {
+    margin-top: 0;
+    min-height: calc(100vh - 7.2rem);
+  }
+}
+@media (min-width: 1280px) {
+  [data-toggle-group=sidebar] {
+    display: none;
+  }
+
+  [data-toggle=actions] {
+    display: inline-block;
+  }
+
+  #title {
+    background: #edf4f8;
+    border-bottom: 0.6rem solid #4c3f1f;
+  }
+  #title h1 {
+    color: #381705;
+    margin-bottom: -0.4rem;
+    font-size: 3.2rem;
+    text-shadow: 1px 1px #edf4f8, -1px 1px #edf4f8, -1px -1px #edf4f8;
+    z-index: 10;
+  }
+
+  #content {
+    min-height: 66vh;
+    padding: 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

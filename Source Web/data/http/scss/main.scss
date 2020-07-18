@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Extra+Condensed');
+@import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css');
+
+@font-face {
+  font-family: "Chicago";
+  src: url("/font/ChicagoFLF.woff") format("woff");
+}
+
+$fira-sans: 'Fira Sans', sans-serif;
+$fira-condensed: 'Fira Sans Extra Condensed', sans-serif;
+$fira-code: 'Fira Code', monospace;
+
+// primary colors
+$color-deepbrown:   hsl(21,84,12);
+$color-lightbrown:  hsl(21,84,66);
+$color-black:       hsl(202,42,12);
+$color-white:       hsl(202,42,95);
+
+// Secondary colors
+$color-orange:      hsl(21,84,42);
+$color-yellow:      hsl(42,84,84);
+$color-drab:        hsl(42,42,21);
+$color-olive:       hsl(84,42,42);
+$color-lightblue:   hsl(189,84,66);
+$color-darkblue:    hsl(202,84,12);
+
+@import "reset";
+@import "visibility";
+@import "layout";
+@import "navigation";

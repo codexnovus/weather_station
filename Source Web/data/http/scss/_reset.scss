@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fira-sans;
+    color: $color-black;
+    background-color: $color-white;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $fira-condensed;
+    color: $color-deepbrown;
+    font-weight: normal;
+}
+
+a {
+    color: $color-lightbrown;
+    text-decoration: none;
+    &:hover {
+        color: lighten($color-lightbrown, 20%);
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h3 {
+    font-size: 1.1875rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h5 {
+    font-size: 1.0625rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h6 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media print, screen and (min-width: 40em) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.9375rem; }
+    h4 { font-size: 1.5625rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; }
+}
+
+hr {
+    clear: both;
+    height: 0;
+    margin: 1.25rem auto;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid $color-lightbrown;
+    border-left: 0;
+}
+
+pre, code, tt {
+    font-family: $fira-code;
+}
+
+/*
+.fad {
+    color: #0f4769;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    &.scroll {
+        min-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+thead, tfoot {
+    background-color: darken(white, 10%);
+    tr {
+        background-color: transparent;
+        &:hover {
+            background-color: darken(white, 12.5%);
+        }
+    }
+}
+
+tr {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: darken(white, 5%);
+}
+
+@media (min-width:768px) { 
+    td {
+        padding: 0.35rem 0;
+    }
+}
+*/

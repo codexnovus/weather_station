@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 300" xml:space="preserve">
+	<style type="text/css">
+		@font-face {
+			font-family: "Chicago";
+			src: url("../font/ChicagoFLF.woff") format("woff");
+		}
+		.standard {
+			stroke: black;
+			stroke-width: 2px;
+			fill: white;
+		}
+		.standard.inverted {
+			fill: black;
+		}
+		.standard.shadow {
+			stroke: #333;
+			fill: #333;
+		}
+		text {
+			font-family: "Chicago";
+			stroke-width: 0px;
+			fill: black;
+		}
+		text.titled {
+			text-decoration: underline;
+		}
+		text.bold {
+			font-weight: bold;
+		}
+		text.smallest {
+			font-size: 6px;
+		}
+		text.smaller {
+			font-size: 10px;
+		}
+		text.small {
+			font-size: 12px;
+		}
+		text.large {
+			font-size: 24px;
+		}
+		text.inverted {
+			fill: white;
+		}
+		#lcd_stroke {
+			fill: black;
+			stroke-width: 0.25px;
+			stroke: white;
+		}
+		.solid {
+			stroke-width: 0px;
+			fill: black;
+		}
+		.solid.inverted {
+			fill: white;
+		}
+		.lcdChar[data-value="1"] .lcd1, .lcdChar[data-value="4"] .lcd1 {
+		  display: none;
+		}
+		.lcdChar[data-value="1"] .lcd2, .lcdChar[data-value="2"] .lcd2, .lcdChar[data-value="3"] .lcd2, .lcdChar[data-value="7"] .lcd2 {
+		  display: none;
+		}
+		.lcdChar[data-value="5"] .lcd3, .lcdChar[data-value="6"] .lcd3 {
+		  display: none;
+		}
+		.lcdChar[data-value="2"] .lcd4 {
+		  display: none;
+		}
+		.lcdChar[data-value="1"] .lcd5, .lcdChar[data-value="4"] .lcd5, .lcdChar[data-value="7"] .lcd5, .lcdChar[data-value="9"] .lcd5 {
+		  display: none;
+		}
+		.lcdChar[data-value="1"] .lcd6, .lcdChar[data-value="3"] .lcd6, .lcdChar[data-value="4"] .lcd6, .lcdChar[data-value="5"] .lcd6, .lcdChar[data-value="7"] .lcd6, .lcdChar[data-value="9"] .lcd6 {
+		  display: none;
+		}
+		.lcdChar[data-value="0"] .lcd7, .lcdChar[data-value="1"] .lcd7, .lcdChar[data-value="7"] .lcd7 {
+		  display: none;
+		}
+		.test {
+			stroke: red;
+			fill: chartreuse;
+			stroke-width: 0.25px;
+		}
+	</style>
+	<defs>
+		<symbol id="TemperatureContainer">
+			<path class="standard shadow" d="M 2 7 Q 2 2,7 2 L 121 2 Q 126 2, 126 7 V 45 Q 126 50, 121 50 H 7 Q 2 50,2 45 Z"></path>
+			<path class="standard" d="M 0 5 Q 0 0,5 0 L 119 0 Q 124 0, 124 5 V 43 Q 124 48, 119 48 H 5 Q 0 48,0 43 Z"></path>
+			<path class="standard inverted" d="M 0 30 H 124 V 43 Q 124 48, 119 48 H 5 Q 0 48,0 43 Z"></path>
+			<svg class="lcdChar temp1" data-value="8" x="3" y="3">
+				<use class="lcd_segment lcd1" href="#lcd_stroke" x="1" y="0"></use>
+				<use class="lcd_segment lcd2" href="#lcd_stroke" x="1" y="-2"  transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd3" href="#lcd_stroke" x="1" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd4" href="#lcd_stroke" x="12" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd5" href="#lcd_stroke" x="1" y="22" ></use>
+				<use class="lcd_segment lcd6" href="#lcd_stroke" x="12" y="-2" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd7" href="#lcd_stroke" x="1" y="11"></use>
+			</svg>
+			<svg class="lcdChar temp2" data-value="8" x="19" y="3">
+				<use class="lcd_segment lcd1" href="#lcd_stroke" x="1" y="0"></use>
+				<use class="lcd_segment lcd2" href="#lcd_stroke" x="1" y="-2"  transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd3" href="#lcd_stroke" x="1" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd4" href="#lcd_stroke" x="12" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd5" href="#lcd_stroke" x="1" y="22" ></use>
+				<use class="lcd_segment lcd6" href="#lcd_stroke" x="12" y="-2" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd7" href="#lcd_stroke" x="1" y="11"></use>
+			</svg>
+			<use href="#glyph_temp" x="35" y="3"></use>
+			<svg class="lcdChar hum1" data-value="8" x="75" y="3">
+				<use class="lcd_segment lcd1" href="#lcd_stroke" x="1" y="0"></use>
+				<use class="lcd_segment lcd2" href="#lcd_stroke" x="1" y="-2"  transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd3" href="#lcd_stroke" x="1" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd4" href="#lcd_stroke" x="12" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd5" href="#lcd_stroke" x="1" y="22" ></use>
+				<use class="lcd_segment lcd6" href="#lcd_stroke" x="12" y="-2" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd7" href="#lcd_stroke" x="1" y="11"></use>
+			</svg>
+			<svg class="lcdChar hum2" data-value="8" x="91" y="3">
+				<use class="lcd_segment lcd1" href="#lcd_stroke" x="1" y="0"></use>
+				<use class="lcd_segment lcd2" href="#lcd_stroke" x="1" y="-2"  transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd3" href="#lcd_stroke" x="1" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd4" href="#lcd_stroke" x="12" y="-13" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd5" href="#lcd_stroke" x="1" y="22" ></use>
+				<use class="lcd_segment lcd6" href="#lcd_stroke" x="12" y="-2" transform="rotate(90 0 0)"></use>
+				<use class="lcd_segment lcd7" href="#lcd_stroke" x="1" y="11"></use>
+			</svg>
+			<use href="#glyph_hum" x="105" y="3"></use>
+			<text class="label small inverted" x="62" y="44" text-anchor="middle">INTERIOR</text>
+		</symbol>
+		<symbol id="DateContainer">
+			<path class="standard shadow" d="M 2 7 Q 2 2,7 2 H 87 Q 92 2, 92 7 V 97 Q 92 102, 87 102 H 7 Q 2 102, 2 97 Z"></path>
+			<path class="standard" d="M 0 5 Q 0 0,5 0 H 85 Q 90 0, 90 5 V 95 Q 90 100, 85 100 H 5 Q 0 100, 0 95 Z"></path>
+			<path class="standard inverted" d="M 0 5 Q 0 0,5 0 H 85 Q 90 0, 90 5 V 17 H 0 Z"></path>
+			<path class="standard" d="M 0 74 H 90"></path>
+		</symbol>
+		<path id="lcd_stroke" d="M 1 2 L 0 1 L 1 0 H 10 L 11 1 L 10 2 Z"></path>
+		<symbol id="glyph_temp">
+			<circle cx="4" cy="4" r="4" fill="black"></circle>
+			<circle cx="4" cy="4" r="2" fill="white"></circle>
+			<circle cx="12" cy="12" r="4" fill="black"></circle>
+			<circle cx="12" cy="12" r="2" fill="white"></circle>
+			<rect x="13" y="7" width="4" height="10" fill="white"></rect>
+		</symbol>
+		<symbol id="glyph_hum">
+			<circle cx="4" cy="4" r="4" fill="black"></circle>
+			<circle cx="4" cy="4" r="2" fill="white"></circle>
+			<path d="M 0 16 H 2 L 16 0 H 14 Z"></path>
+			<circle cx="12" cy="12" r="4" fill="black"></circle>
+			<circle cx="12" cy="12" r="2" fill="white"></circle>
+		</symbol>
+		<symbol id="tomorrow_widget">
+			<text class="label small titled" x="35" y="11" text-anchor="middle"> JUE </text>
+			<image href="WECRSM.bmp" x="13" y="15" width="43" height="45"></image>
+			<text class="label small" x="35" y="71" text-anchor="middle">20º - 22º</text>
+		</symbol>
+	</defs>
+	<g id="backgroundElements">
+		<rect width="400" height="300" x="0" y="0" fill="white"/>
+		<rect width="400" height="20"  x="0" y="0" fill="black"/>
+	</g>
+	<g id="tempWidgets">
+		<use id="temp_widget_left"   href="#TemperatureContainer" x="3"   y="248"/>
+		<use id="temp_widget_middle" href="#TemperatureContainer" x="137" y="248"/>
+		<use id="temp_widget_right"  href="#TemperatureContainer" x="272" y="248"/>
+	</g>
+	<g id="networkWidget">
+		<circle class="standard" cx="10" cy="10" r="8"></circle>
+		<text class="smallest bold" text-anchor="middle" x="10" y="12.5">35%</text>
+		<text id="container_network_name" class="small inverted" x="20" y="15">L0-NETWORK</text>
+		<text id="container_network_address" class="small inverted" text-anchor="end" x="398" y="15">192.168.1.1</text>
+	</g>
+	<g id="todayWidget">
+		<text text-anchor="middle"			class="small titled" x="50" y="140"> Hoy </text>
+		<text text-anchor="end"				class="smaller bold" x="47" y="160">Viento:</text>
+		<text text-anchor="end"			    class="smaller bold" x="47" y="190">Nubes:</text>
+		<text text-anchor="end"             class="smaller bold" x="47" y="210">Presión:</text>
+		<text id="container_today_wind1"    class="smaller"      x="53" y="160">Brisa Ligera</text>
+		<text id="container_today_wind2"    class="smaller"      x="53" y="175">5.1m/s OSO</text>
+		<text id="container_today_cloud"    class="smaller"      x="53" y="190">Dispersas</text>
+		<text id="container_today_pressure" class="smaller"      x="53" y="210">1061 hpa</text>
+		<image id="container_today_moon"    href="MWC.bmp"  x="35" y="215" height="30" width="30"></image>
+		<image id="container_today_weather" href="WECR.bmp" x="115" y="50" height="181" width="190"></image>
+		<text id="container_today_city" class="large titled" x="200" y="42" text-anchor="middle">BARCELONA</text>
+	</g>
+	<g id="dateWidget">
+		<use id="container_date" href="#DateContainer"        x="6"   y="24" />
+		<text id="container_date_dayOfWeek"  x="50" y="39"  class="small inverted" text-anchor="middle">Miércoles</text>
+		<text id="container_date_dayOfMonth" x="50" y="65"  class="large"          text-anchor="middle">29</text>
+		<text id="container_date_month"      x="50" y="80"  class="small"          text-anchor="middle">SEPTIEMBRE</text>
+		<text id="container_date_year"       x="50" y="94"  class="small"          text-anchor="middle">1979</text>
+		<text id="container_date_hour"       x="50" y="121.5" class="large"        text-anchor="middle">00:00</text>
+	</g>
+	<g id="tomorrowWidget">
+		<use id="tomorrow_widget_top"    href="#tomorrow_widget" x="320" y="25"></use>
+		<use id="tomorrow_widget_middle" href="#tomorrow_widget" x="320" y="98"></use>
+		<use id="tomorrow_widget_bottom" href="#tomorrow_widget" x="320" y="172"></use>
+
+	</g>
+</svg>

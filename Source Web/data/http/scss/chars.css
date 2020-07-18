@@ -1,0 +1,23 @@
+.lcdChar[data-value="1"] .lcd1, .lcdChar[data-value="4"] .lcd1 {
+  display: none;
+}
+.lcdChar[data-value="1"] .lcd2, .lcdChar[data-value="2"] .lcd2, .lcdChar[data-value="3"] .lcd2, .lcdChar[data-value="7"] .lcd2 {
+  display: none;
+}
+.lcdChar[data-value="5"].lcd3, .lcdChar[data-value="6"].lcd3 {
+  display: none;
+}
+.lcdChar[data-value="2"].lcd4 {
+  display: none;
+}
+.lcdChar[data-value="1"].lcd5, .lcdChar[data-value="4"].lcd5, .lcdChar[data-value="7"].lcd5, .lcdChar[data-value="9"].lcd5 {
+  display: none;
+}
+.lcdChar[data-value="1"].lcd6, .lcdChar[data-value="3"].lcd6, .lcdChar[data-value="4"].lcd6, .lcdChar[data-value="5"].lcd6, .lcdChar[data-value="7"].lcd6, .lcdChar[data-value="9"].lcd6 {
+  display: none;
+}
+.lcdChar[data-value="0"].lcd7, .lcdChar[data-value="1"].lcd7, .lcdChar[data-value="7"].lcd7 {
+  display: none;
+}
+
+/*# sourceMappingURL=chars.css.map */

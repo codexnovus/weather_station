@@ -1,7 +1,7 @@
 # About the boards
 
 ## Shield Board
-<img src="Shield/Render%20Preview.png" style="float:left; margin-right: 30px;" height="200">
+<img src="Shield/Render%20Preview.png" align="left" height="200">
 
 * [Schematics](Shield/Schematics.pdf)
 * [BOM](Shield/BOM.md) 
@@ -14,7 +14,7 @@ The board is designed to be mounted behind the E-ink screen and can be held up w
 ---
 
 ## WROOM Board
-<img src="WROOM%20Board/Render%20Preview.png" style="float:left; margin-right:30px" height="200">
+<img src="WROOM%20Board/Render%20Preview.png" align="left" height="200">
 
 * [Schematics](WROOM%20Board/Schematics.pdf)
 * [BOM](WROOM%20Board/BOM.md) 

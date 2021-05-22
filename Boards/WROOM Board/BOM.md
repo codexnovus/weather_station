@@ -7,12 +7,12 @@
 | C3,C8,C9,C10,C11,C12,C13,C14 | 100nF C0805 | | C49678 |
 | C4,C7 | 10uF C0805 | | C15850 |
 | D1 | B5819W | Protection diode | C8598 |
-| LED1, LED2 | Red LED0805 | | C84256 |
-| Q1, Q2 | S8050 | NPN Transistors | C2146 |
+| LED1, LED2 | LED0805 | Current part is Red | C84256 |
+| Q1, Q2 | S8050 | NPN Transistor | C2146 |
 | R1,R2,R3 | 10kΩ R0805 | | C17414 |
-| R4,R5,R6,R7,R13 |2k R0805 | | C17604 |
-| R8,R9,R10,R11,R12 | 3.3k R0805 | | C26010 |
-| SW1, SW2, SW3 | PTS645VH39-2LFS | 90º Angle TH Tactile Switch | C221887 |
+| R4,R5,R6,R7,R13 |2kΩ R0805 | | C17604 |
+| R8,R9,R10,R11,R12 | 3.3kΩ R0805 | | C26010 |
+| SW1, SW2, SW3 | PTS645VH39-2LFS | Right Angle TH Tactile Switch | C221887 |
 | U1 | ESP32-WROOM-32DC | | C473013 |
 | U2 | AMS1117-3.3 | LDO Voltage Regulator | C6186 |
 | U3 | CP2102-GMR | USB-to-UART bridge | C6568 |

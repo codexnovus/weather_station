@@ -7,12 +7,12 @@
 | Schematic Label | Board Label | Component | Notes | Mouser Ref |
 | --- | --- | --- | --- | --- |
 | H1 | Screen | Male Header 2.54mm pitch 1x8 | Must be mounted pointing below the board | 649-1012937890801BLF |
-| H2 | SDCard | Female Header 2.54mm pitch 1x6 | | 437-3108710641001101 |
-| H3 | I2C | Female Header 2.54mm pitch 1x4 | | 437-3108310441001101 |
-| H4 | Expansion | Female Header 2.54mm pitch 2x7 | Optional | 200-CES10701TD |
+| H2 | SDCard | Female Housing 2.54mm pitch 1x6 | | 437-3108710641001101 |
+| H3 | I2C | Female Housing 2.54mm pitch 1x4 | | 437-3108310441001101 |
+| H4 | Expansion | Female Housing 2.54mm pitch 2x7 | Optional, can be replaced by male header | 200-CES10701TD |
 | USER | USER/G15| 6mm Tactile Button Switch, TH | Optional | 706-95C06B3T |
 | C3 | 100nF | 100nF ceramic capacitor | Optional | 594-K104K15X7RF53H5 |
-| U1 | ESP32 | 2x Female Header 2.54mm pitch 1x19 | 1x19 headers are difficult to find cheap so you can either clip a 1x20 header or solder it completely. I added an extra hole for that. | 437-3108711941001101 |
+| U1 | ESP32 | 2x Female Housing 2.54mm pitch 1x19 | 1x19 housings are difficult to find cheap so you can either clip a 1x20 header or solder it completely. I added an extra hole for that. | 437-3108711941001101 |
 
 ## Mounted on Board
 | Mount Location | Component Description | Where to get it? |
